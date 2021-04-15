@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/multiply_nav"
+    app:startDestination="@id/multiplicationPageFragment2">
+
+    <fragment
+        android:id="@+id/multiplicationPageFragment2"
+        android:name="com.nurozkaya.bottomnavigationhomework.MultiplicationPageFragment"
+        android:label="fragment_multiplication_page"
+        tools:layout="@layout/fragment_multiplication_page" >
+        <action
+            android:id="@+id/multiply_transition"
+            app:destination="@id/multiplicationPageResult">
+            <argument
+                android:name="result_multiply"
+                android:defaultValue="0" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/multiplicationPageResult"
+        android:name="com.nurozkaya.bottomnavigationhomework.MultiplicationPageResult"
+        android:label="fragment_multiplication_page_result"
+        tools:layout="@layout/fragment_multiplication_page_result" >
+        <argument
+            android:name="result_multiply"
+            app:argType="integer" />
+    </fragment>
+</navigation>
