@@ -48,4 +48,42 @@
             app:argType="integer"
             android:defaultValue="0" />
     </fragment>
+    <fragment
+        android:id="@+id/subtractionPageFragment"
+        android:name="com.nurozkaya.bottomnavigationhomework.SubtractionPageFragment"
+        android:label="fragment_substraction_page"
+        tools:layout="@layout/fragment_subtraction_page" >
+        <action
+            android:id="@+id/subtractGecis"
+            app:destination="@id/subtractionPageResult" />
+    </fragment>
+    <fragment
+        android:id="@+id/subtractionPageResult"
+        android:name="com.nurozkaya.bottomnavigationhomework.SubtractionPageResult"
+        android:label="fragment_substraction_page_result"
+        tools:layout="@layout/fragment_subtraction_page_result" >
+        <argument
+            android:name="subtractResult"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/divisionPageFragment"
+        android:name="com.nurozkaya.bottomnavigationhomework.DivisionPageFragment"
+        android:label="fragment_division_page"
+        tools:layout="@layout/fragment_division_page" >
+        <action
+            android:id="@+id/divideGecis"
+            app:destination="@id/divisionPageResult" />
+    </fragment>
+    <fragment
+        android:id="@+id/divisionPageResult"
+        android:name="com.nurozkaya.bottomnavigationhomework.DivisionPageResult"
+        android:label="fragment_division_page_result"
+        tools:layout="@layout/fragment_division_page_result" >
+        <argument
+            android:name="divideResult"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>

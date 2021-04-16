@@ -13,5 +13,13 @@
     <item
         android:id="@+id/multiplicationPageFragment"
         android:icon="@drawable/multiply_icon"
-        android:title="multiply" />
+        android:title="Multiply" />
+    <item
+        android:id="@+id/subtractionPageFragment"
+        android:icon="@drawable/substract_icon"
+        android:title="Subtract" />
+    <item
+        android:id="@+id/divisionPageFragment"
+        android:icon="@drawable/divide"
+        android:title="Division" />
 </menu>
