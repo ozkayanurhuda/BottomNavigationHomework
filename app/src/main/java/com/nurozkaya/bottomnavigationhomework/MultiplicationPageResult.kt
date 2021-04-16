@@ -19,8 +19,9 @@ class MultiplicationPageResult : Fragment() {
         // Inflate the layout for this fragment
         val design =inflater.inflate(R.layout.fragment_multiplication_page_result, container, false)
 
+        //gelen veriyi yakala
         val bundle:MultiplicationPageResultArgs by navArgs ()
-        val result = bundle.resultMultiply
+        val result = bundle.multiplyResult
 
         design.resultTextMultiply.text = "Multiplication is : " + result
 

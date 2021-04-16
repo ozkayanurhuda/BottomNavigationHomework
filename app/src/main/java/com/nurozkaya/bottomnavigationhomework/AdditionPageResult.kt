@@ -18,12 +18,13 @@ class AdditionPageResult : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         val design = inflater.inflate(R.layout.fragment_addition_page_result, container, false)
 
         //sayfaya gelen veriyi yakalamak
         val bundle:AdditionPageResultArgs by navArgs()
-        val result = bundle.resultAdd
+        val result = bundle.addResult
 
         design.resultTextAdd.text = "Sum is : " +result
 

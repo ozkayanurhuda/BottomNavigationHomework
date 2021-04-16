@@ -20,7 +20,7 @@ class AdditionPageFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       val design = inflater.inflate(R.layout.fragment_addition_page,container, false)
+        val design = inflater.inflate(R.layout.fragment_addition_page,container, false)
         return design
 
     }
@@ -28,10 +28,11 @@ class AdditionPageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val button : Button= view.findViewById(R.id.buttonAddition)
+
         button.setOnClickListener {
             val result= enternumber1.text.toString().toInt() +
                     enternumber2.text.toString().toInt()
-            val nav = AdditionPageFragmentDirections.addTransition(result)
+            val nav = AdditionPageFragmentDirections.addGecis(result)
             Navigation.findNavController(it).navigate(nav)
         }
     }

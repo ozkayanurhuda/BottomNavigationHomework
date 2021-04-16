@@ -19,10 +19,13 @@ class MultiplicationPageFragment : Fragment() {
         // Inflate the layout for this fragment
         val design = inflater.inflate(R.layout.fragment_multiplication_page, container, false)
 
+
         design.buttonMultiplication.setOnClickListener {
             val result:Int = design.enternumber3.text.toString().toInt() *
                     design.enternumber4.text.toString().toInt()
-            val nav = MultiplicationPageFragmentDirections.multiplyTransition(result )
+
+            //veri gönder
+            val nav = MultiplicationPageFragmentDirections.multiplyGecis(result )
             Navigation.findNavController(it).navigate(nav)
         }
 

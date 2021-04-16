@@ -14,10 +14,38 @@
         android:id="@+id/additionPageFragment"
         android:name="com.nurozkaya.bottomnavigationhomework.AdditionPageFragment"
         android:label="fragment_addition_page"
-        tools:layout="@layout/fragment_addition_page" />
+        tools:layout="@layout/fragment_addition_page" >
+        <action
+            android:id="@+id/addGecis"
+            app:destination="@id/additionPageResult2" />
+    </fragment>
     <fragment
         android:id="@+id/multiplicationPageFragment"
         android:name="com.nurozkaya.bottomnavigationhomework.MultiplicationPageFragment"
         android:label="fragment_multiplication_page"
-        tools:layout="@layout/fragment_multiplication_page" />
+        tools:layout="@layout/fragment_multiplication_page" >
+        <action
+            android:id="@+id/multiplyGecis"
+            app:destination="@id/multiplicationPageResult2" />
+    </fragment>
+    <fragment
+        android:id="@+id/additionPageResult2"
+        android:name="com.nurozkaya.bottomnavigationhomework.AdditionPageResult"
+        android:label="fragment_addition_page_result"
+        tools:layout="@layout/fragment_addition_page_result" >
+        <argument
+            android:name="addResult"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/multiplicationPageResult2"
+        android:name="com.nurozkaya.bottomnavigationhomework.MultiplicationPageResult"
+        android:label="fragment_multiplication_page_result"
+        tools:layout="@layout/fragment_multiplication_page_result" >
+        <argument
+            android:name="multiplyResult"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>
